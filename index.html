@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>be brave</title>
+
+	<style>
+
+	@font-face {
+	    font-family: 'A2z500';
+	    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-5Medium.woff2') format('woff2');
+	    font-weight: 500;
+	    font-display: swap;}
+
+	@font-face {
+    	font-family: 'A2z700';
+    	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-6@1.0/에이투지체-7Bold.woff2') format('woff2');
+    	font-weight: 700;
+    	font-display: swap;}
+
+	@font-face {
+	    font-family: 'Escoredream';
+	    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-4Regular.woff') format('woff');
+	    font-weight: normal;
+	    font-display: swap;}
+
+	@font-face {
+		font-family: 'Galmuri11Condensed';
+		src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2506-1@1.0/Galmuri11-Condensed.woff2') format('woff2');
+		font-weight: normal;
+		font-display: swap;}
+
+	@font-face {
+	    font-family: 'Cafe24ProSlim';
+	    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2511-1@1.0/Cafe24PROSlim-Light.woff2') format('woff2');
+	    font-weight: 300;
+	    font-display: swap;}
+
+	@font-face {
+	    font-family: 'Mulmaru';
+	    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/2601-4@1.1/Mulmaru.woff2') format('woff2');
+	    font-weight: normal;
+	    font-display: swap;}
+
+
+		header,body,footer,h1,h2,h3,p{margin: 0px; word-break: keep-all;}
+		section,header{width: 800px; margin: auto; padding: 160px 80px;}
+		body{overflow-x: hidden;}
+		header{width: 1200px; padding: 300px 0px; font-size: 5rem; line-height: 1.4; font-family: 'A2z700'}
+		section{position: relative}
+		footer{margin: auto; background-color: black; padding: 60px}
+		h1,h2,h3{padding: 80px 0px; font-size: 3rem; font-family: 'A2z500'}
+		p{font-size: 0.95rem; line-height: 1.6; font-family: 'Escoredream'}
+		ul{list-style: none;}
+		ul li a{text-decoration: none;
+				display: block;
+				padding: 15px 12px;
+				backdrop-filter: blur(9px);
+				color: blue;}
+		ul li a:visited{color: inherit;}
+		ul li a:hover{background: blue; color: white; transition: all 0.5s}
+
+		.flex{display: flex; justify-content: space-between;}
+		.nav{position: fixed; width: 100%; z-index: 100; position: fixed;}
+		.contact a {
+  		text-decoration: none;}
+  		.wid{width: 1000px; margin: 0 auto;}
+
+		.center{text-align: center}
+		.centeralign{margin: auto}
+		.leftalign{margin-left: auto}
+		.right{text-align: right}
+		.width{width: 540px}
+		.container{display: flex; gap: 30px}
+		.box{box-sizing: border-box; flex: 1; padding: 20px}
+		.overlay{position: fixed; bottom: 40px; left: 20px;width: 280px; z-index: 2;}
+		.overlay:hover .bebrave{opacity: 1; transform: translateX(0)}
+
+		.p30{padding: 30px 0px}
+		.p50{padding: 50px 0px}
+		.p100{padding: 100px 0px}
+		.p120{padding: 120px 0px}
+		.p200{padding: 200px 0px}
+		.p240{padding: 240px 0px}
+		.p300{padding: 300px 0px}
+		.pt100{padding-top: 100px}
+		.pt180{padding-top: 180px}
+		.pb100{padding-bottom: 100px}
+		.pb180{padding-bottom: 180px}
+
+		.blur{backdrop-filter: blur(9px); color: white;}
+		.white{color: white}
+		.whiteshadow{text-shadow: 0px 0px 5px white}
+		.whiteshadow2{text-shadow: 0px 0px 20px white}
+		.blackshadow{text-shadow: 0px 0px 5px black}
+		.headerb{background-image: url('header.png'); background-attachment: fixed;}
+		.blue{color: blue}
+		.orange{color: orange;}
+		.blueb{background-color: blue}
+		.blackb{background-color: black}
+		.whiteb{background-color: white}
+		.gray{color: gray}
+		.whiteb80{background-color: white; opacity: 80%}
+		.lineb{background-image: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('linebackground.png'); background-attachment: fixed}
+		.runningb{background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(https://media0.giphy.com/media/v1.Y2lkPTc5MGI3NjExNG9uZWsyaG1yZ280c3o2a2NhNDM4MHNjM3hpY2ZncGNiaDd2YXBjMSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/3o7ZeLr01g0kAk4K6Q/200.webp); background-size: 50px; background-attachment: fixed;}
+		.noise2b{background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('noise2.jpg');}
+		.doitb{background-image: url('doit.png'); width: 100%; background-attachment: fixed;}
+		.balloons{width: 150px; display: block;}
+		.bebrave{position: absolute; top: 0; right: 0%; width: 150px; opacity: 0;transform: translateX(-10px); transition: all 0.3s ease;}
+		.stars{position: absolute; z-index: -1; left: -290px; top: 555px}
+		.bluecircle{position: absolute; z-index: -1; top: 340px; left: 50px; display: block;}
+		.good{position: absolute; z-index: 1; right: -200px; bottom: 0px; width: 500px}
+
+		.italic{font-style: italic;}
+		.bold{font-weight: 900}
+		.cafe{font-family: 'Cafe24ProSlim'}
+		.mul{font-family: 'Mulmaru'}
+
+	</style>
+</head>
+	<body>
+		<div class="headerb center">
+			<nav class="blur nav">
+				<div class="wid flex blue">
+					<div>
+						<p style="font-family: 'A2z700';
+						   padding: 30px 12px;">용기가 필요해</p>
+					</div>
+					<ul class="flex" style="font-family: 'Galmuri11Condensed';">
+						<li><a href="#first">첫 기차</a></li>
+						<li><a href="#wrong">엥?</a></li>
+						<li><a href="#notgood">소심</a></li>
+						<li><a href="#re">재입장!</a></li>
+						<li><a href="#change">변화</a></li>
+					</ul>
+				</div>
+			</nav>
+			<div class="overlay">
+				<img src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExOWF2OHFyODBydzllbzIzbzE4aW52ZWFtMDNsdmp5c28wNDI0NzZnNyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/yZaIiaicWYuw8/giphy.gif" class="balloons">
+				<img src="bebrave.png" class="bebrave">
+			</div>
+			<header class="mul blue whiteshadow2">처음 해 보는 일에는<br>어느 정도의 용기가 필요해</header>
+		</div>
+		<section>
+			<div class="pt180 center">
+				<p>대한민국에서 나고 자란 20대의 사람이라면, KTX를 타 본 사람이 그렇지 않은 사람보다 많을 것이다.<br><br>얼마 전까지의 나는 거기에 포함되지 못했지만.</p>
+			</div>
+		</section>
+		<section id="first">
+			<div class="width pb100">
+				<h1>인생 첫 기차 타기</h1>
+				<p>어릴 때부터 우리나라 방방곡곡 여행은 다 갔지만, 그 흔하다는 부산은 기차 타고 가 본 적이 없었다. 더구나 스무 살이 되고 밖에 돌아다니기가 더욱 귀찮아진 나는 KTX와는 꾸준한 거리감을 유지하고 있는 사람이었다.</p><br>
+				<p>그러다 올해 1월 29일, 드디어(!) KTX를 타 볼 일이 생겼다. 사실 별로 좋은 일은 아니었다. 제천에 살고 있는 세상에서 제일 건강한 우리 아빠. 무슨 일을 해도 아프질 않고 병원도 가지 않던 분이 대상포진이 와 입원을 하셨단다. 최근에 바빠 얼굴도 보질 못했으니, 오랜만에 아빠 보러 가기 위해 인생 첫 기차를 탄 셈이었다.</p>
+				<img src="today.png" class="pt100">
+			</div>
+		</section>
+		<div class="blueb">
+			<section class="runningb">
+				<div class="p30">
+					<h1 class="center p30 blur whiteshadow2">드디어 당일이 되었다!</h1>
+				</div>
+				<div class="container centeralign">
+					<div class="box blur"><p>아침 일찍 일어나 1호선을 타고 청량리에 도착해, 11시 20분 기차를 탔다. 급하게 예약해 창문 자리를 잡지 못한 건 아쉽지만 그저 그런대로 자리에 앉았다. 아빠 병문안을 가고,</p></div>
+					<div class="box blur"><p>풍경도 구경하고 다시 돌아오는 기차를 탔다. 오후 2시 55분 열차, 6호차 6A 좌석이었다. 이번엔 창문 자리도 잡아서 기분이 좋다. 그런데,</p></div>
+				</div>
+			</section>
+		</div>
+		<div class= "blackb">
+			<section class="white" id="wrong">
+				<div class="leftalign right p100">
+					<h2>'내가 잘못 보고 있는 건가?'</h2>
+					<p class="width leftalign">그게 아니라면, 내 자리에 정체 모를 아저씨가 앉아 있다. 그냥 있는 것도 아니고, 간이 책상에는 짐을 잔뜩 널어놓고 팔짱을 딱 낀 채로 좋은 잠을 자고 계신다.<br><br>옆의 6B 좌석에는 아주머니가 있는데, 날 자꾸 빤히 바라본다. 안 그래도 나만 일어서 있어서 이 6호차의 모두가 날 쳐다보고 있는데 아주머니까지 그러시면 식은땀이 배로 난다구요. (제발 모두 저를 무시해주세요...)</p>
+				</div>
+				<img src="sleep.png" class="pb100">
+				<div class="center noise2b p30 whiteshadow italic">
+					<p style="font-size: 4rem; font-family: 'Galmuri11Condensed';">'어떡하지? 어떡하지? 어떡하지?'</p>
+				</div>
+				<div class="width centeralign center pt180 pb180">
+					<p>당황해 5초 간 얼어 있다가 전화를 받는 척 민망한 얼굴을 숨기며 칸을 빠져나왔다. 열차를 잘못 탔나 싶어 급한 마음에 아직 닫히지 않은 칸의 문을 빠져나가 상봉행인 것을 확인한다. 그러자 밖의 역무원 분이 위험하니 빨리 들어가라며 소리쳤다. 한 번 더 부끄러워져 그대로 안으로 다시 들어와버렸다.<br><br>
+					내가 열차를 헷갈린 건 분명 아닌데, 다른 경우의 수가 없다. 이것저것 검색해볼 것도 없다. 사람이 꽉 차 있던 바로 그 6호차에 다시 들어가 확인해야만 한다.</p>
+				</div>
+			</section>
+		</div>
+		<div class="lineb">
+			<section class="lineb" id="notgood">
+				<div class="white center">
+					<h1 class="whiteshadow">이게 뭐가 그렇게 대단한 일이냐고?</h1>
+					<p class="p100">누구나 그렇게 말할 수 있다. 그냥 처음부터 물어봤으면 되잖아? 라고.<br>그런데 가끔씩 불쑥 튀어나오는 이 소심한 근성이 어디 가지를 않는다.</p>
+					<div class="container">
+						<div class="box blueb">
+							<p class="mul">원래 내가 서 있던 줄인데, 누군가 대뜸 이유 없이 양보를 권해도 그냥 자리를 내어 주고</p>
+						</div>
+						<div class="box blueb">
+							<p class="mul">시험 보기 전에 의자가 이상하다고 말하지 못해 45분 동안 불편한 채로 시험을 보거나,</p>
+						</div>
+						<div class="box blueb">
+							<p class="mul">아무의 잘못도 없었던 가족과의 말다툼은 먼저 사과하지 못해 5일을 말도 섞지 않고 지냈다.</p>
+						</div>
+					</div>
+					<p class="p100">이제는 좀 달라질 때도 됐다. 사소한 일에서부터 바뀌어야<br>앞으로도 이런 일 쯤은 아무렇지 않게 해결하는 사람이 되는 거야.</p>
+				</div>
+			</section>
+		</div>
+		<section id="re">
+			<div class="width">
+				<h1>떨리는 마음으로 재입장!</h1>
+				<p>다시 들어가니 역시나 모두가 날 쳐다본다. 약간의 철판을 깔고 빠른 걸음으로 들어가 6A 자리의 아저씨를 마주한다. 역시 깨울 자신은 없다고 흔들리던 찰나, 옆의 분에게라도 물어봐야겠다고 생각했다. 용기를 낸 순간 아주머니와 내가 동시에 말을 건다.</p>
+			</div>
+			<h3 class="p200 italic white whiteshadow" style="transform: skewY(-4deg); font-size: 5rem;">저기요!</h3>
+			<p>할 말을 잊은 날 앞에 두고 아주머니가 말을 이어간다.</p>
+			<p class="p50 italic cafe orange bold" style="font-size: 2.2rem">“6A 자리 분이시죠? 이 사람이 제 남편인데, 죄송하지만 옆의 6C 자리에 앉으시면 안 될까요?"</p>
+			<p class="width">그러고보니 복도를 사이에 두고 옆 자리가 하나 비어 있다. 엮어 보면, 내가 먼저 6A를 예매한 후 남은 두 자리를 잡으셨는데 내가 나중에 타는 사람이니 일단 붙은 좌석을 차지하고 보신 모양이다. 이제는 어이가 없어서 말이 안 나오지만… 죽은 듯 자고 있는 그 아저씨를 차마 깨우고 안으로 비집고 들어가기에는 정신적 에너지가 너무 많이 소모되었다. 결국 그냥 6C 자리에 앉았다. 창문 자리는 또 놓쳐버렸어. 그래도 집에 오는 열차는 맞으니 결과적으로 해결이 된 것이다. </p>
+			</div>
+			<img src="stars.png" class="stars">
+		</section>
+		<div class="doitb">
+			<section id="change">
+				<img src="bluecircle.png" class="bluecircle">
+				<div class="center p300 white whiteshadow">
+				<h1>오늘이 바로 내가 바뀌는 날</h1>
+				<p>당연하지만 애초에 처음부터 당당하게 물어보면 될 일이었다. 그 작은 용기를 내는 일이<br>확신이 부족하다는 이유만으로 그렇게 어려웠다. 어릴 때부터 항상 이런 식이었던 것 같다.</p><br>
+				<p>하지만 이번 일로 다시 한 번 느꼈다. 적어도 내 잘못이 없을 땐 일단 지르고 봐야 된다.<br>엉뚱한 방향으로 고민하고 골머리 앓아 봤자 해결되는 건 없고, 우선 뭐라도 해 봐야 한다.</p>
+				</div>
+			<img src="good.png" class="good">
+			</section>
+		</div>
+	</body>
+	<footer>
+		<p class="gray center">처음 해 보는 일에는 어느 정도의 용기가 필요해 &copy; 2026 장채은. All rights reserved.</p>
+	</footer>
+</html>
